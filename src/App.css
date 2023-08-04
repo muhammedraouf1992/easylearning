@@ -1,14 +1,37 @@
 .topBanner {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../public/Image/banner.jpg");
+    url("./assets/Image/banner.jpg");
   background-attachment: fixed;
   background-position: center;
   min-height: 550px;
   background-repeat: no-repeat;
 }
-/* .topBannerOverlay {
-  min-height: 550px;
-  width: 100%;
+.title {
+  font-size: 48px;
+}
+.underline::after {
+  content: "";
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.7);
-} */
+  height: 2px;
+  width: 15%;
+  background-color: black;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.serviceIcon {
+  width: 80px;
+  height: 80px;
+}
+.shadow-md:hover {
+  box-shadow: 1px 1px 5px 5px rgba(29, 4, 170, 0.1);
+  transition: all 0.3s;
+}
+.service_card_title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800 !important;
+  font-size: 26px !important;
+}
+.descr {
+  color: #505050 !important;
+}

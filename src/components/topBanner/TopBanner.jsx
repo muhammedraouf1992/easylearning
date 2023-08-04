@@ -16,10 +16,12 @@ const TopBanner = () => {
       >
         <div className="topBannerOverlay"></div>
         <Row className=" text-center text-white">
-          <Col className="d-flex justify-content-center  flex-column">
-            <h1 className="text-capitalize">easy learning</h1>
-            <h4>learn professionally</h4>
-            <Button variant="primary">Learn More</Button>
+          <Col className="">
+            <h1 className="text-uppercase title">easy learning</h1>
+            <h4 className="text-capitalize fs-5 my-3">learn professionally</h4>
+            <Button variant="primary" className="mt-2">
+              Learn More
+            </Button>
           </Col>
         </Row>
       </Container>
