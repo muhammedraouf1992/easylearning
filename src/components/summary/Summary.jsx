@@ -38,7 +38,7 @@ const Summary = () => {
     countCourses(coursesValues);
   }, [courses, student, reviews]);
   return (
-    <Container className="summaryBanner my-5">
+    <Container fluid={true} className="summaryBanner my-5">
       <Row>
         <Col lg={8} md={12} sm={8}>
           <Row className="mt-5">
