@@ -47,5 +47,31 @@
   font-weight: 700 !important;
   font-size: 14px !important;
 }
-@media (max-width: 500px) {
+
+.summaryBanner {
+  background: linear-gradient(rgba(8, 3, 59, 0.7), rgba(8, 3, 59, 0.7)),
+    url("./assets/Image/summary.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 550px;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.counter {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+}
+.counter-subtitle {
+  color: rgb(255, 221, 27);
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.line {
+  width: 100px;
+  height: 2px;
+  background: white;
 }

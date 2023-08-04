@@ -14,7 +14,6 @@ const TopBanner = () => {
         fluid={true}
         className="topBanner d-flex justify-content-center align-items-center"
       >
-        <div className="topBannerOverlay"></div>
         <Row className=" text-center text-white">
           <Col className="">
             <h1 className="text-uppercase title">easy learning</h1>
