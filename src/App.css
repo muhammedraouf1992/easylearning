@@ -76,3 +76,11 @@
   height: 2px;
   background: white;
 }
+.sub-title {
+  font-family: "Raleway", sans-serif !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+.navbar {
+  opacity: 0.7;
+}
