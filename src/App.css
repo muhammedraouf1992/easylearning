@@ -35,3 +35,17 @@
 .descr {
   color: #505050 !important;
 }
+.bg-body-primary,
+.bg-body-tertiary {
+  transition: all 0.5s;
+}
+.navbar-text {
+  color: white !important;
+}
+.navbar-links {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+}
+@media (max-width: 500px) {
+}
