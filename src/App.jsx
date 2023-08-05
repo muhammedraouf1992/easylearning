@@ -6,6 +6,11 @@ import TopBanner from "./components/topBanner/TopBanner";
 import Summary from "./components/summary/Summary";
 import Projects from "./components/projects/Projects";
 import Courses from "./components/courses/Courses";
+import Video from "./components/video/Video";
+import Testimonial from "./components/testimonial/Testimonial";
+import AboutMe from "./components/aboutMe/AboutMe";
+import Footer from "./components/footer/Footer";
+
 function App() {
   return (
     <div>
@@ -16,6 +21,10 @@ function App() {
       <Summary />
       <Projects />
       <Courses />
+      <Video />
+      <Testimonial />
+      <AboutMe />
+      <Footer />
     </div>
   );
 }

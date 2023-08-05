@@ -12,7 +12,7 @@ const Summary = () => {
   const studentValue = 35000;
   const coursesValues = 22;
   const reviewsValue = 3000;
-  console.log(window.screenY);
+
   function countStudent(number) {
     const c = number / 200; //1750
     if (student < studentValue) {

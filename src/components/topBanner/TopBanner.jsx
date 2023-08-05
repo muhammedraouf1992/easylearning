@@ -10,7 +10,7 @@ const TopBanner = () => {
     <>
       <Container
         fluid={true}
-        className="topBanner d-flex justify-content-center align-items-center"
+        className="topBanner d-flex justify-content-center align-items-center mt-5"
       >
         <Row className=" text-center text-white">
           <Col className="">
