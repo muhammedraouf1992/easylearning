@@ -6,7 +6,9 @@ const Courses = () => {
     <Container className="my-5">
       <Row>
         <div className="">
-          <h1 className="text-center underline position-relative">Services</h1>
+          <h1 className="text-center underline position-relative">
+            All Courses
+          </h1>
         </div>
       </Row>
       <Row className="mt-5">

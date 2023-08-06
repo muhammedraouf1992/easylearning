@@ -52,7 +52,7 @@ function NavbarComponent() {
               About
             </Nav.Link>
             <Nav.Link
-              href="#deets"
+              href="/services"
               className={`text-uppercase navbar-links ${
                 scrolled ? "text-black" : "text-white"
               }`}
@@ -60,7 +60,7 @@ function NavbarComponent() {
               service
             </Nav.Link>
             <Nav.Link
-              href="#deets"
+              href="/courses"
               className={`text-uppercase navbar-links ${
                 scrolled ? "text-black" : "text-white"
               }`}
@@ -68,7 +68,7 @@ function NavbarComponent() {
               courses
             </Nav.Link>
             <Nav.Link
-              href="#deets"
+              href="/portfolio"
               className={`text-uppercase navbar-links ${
                 scrolled ? "text-black" : "text-white"
               }`}
@@ -76,7 +76,7 @@ function NavbarComponent() {
               portfolio
             </Nav.Link>
             <Nav.Link
-              href="#deets"
+              href="/contact"
               className={`text-uppercase navbar-links ${
                 scrolled ? "text-black" : "text-white"
               }`}

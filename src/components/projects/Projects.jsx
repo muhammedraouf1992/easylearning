@@ -14,7 +14,7 @@ const Projects = () => {
       </Row>
       <Row className="mt-5">
         <Col lg={4} md={6} sm={12} className="project-card shadow-md mt-2">
-          <Card>
+          <Card className="project_card">
             <Card.Img
               variant="top"
               src="https://image.freepik.com/free-photo/shocked-male-student-poses-desktop-home-office-uses-laptop-computer-searching-online-education-course-browses-distance-learning-website_273609-34548.jpg"
@@ -30,7 +30,7 @@ const Projects = () => {
           </Card>
         </Col>
         <Col lg={4} md={6} sm={12} className="project-card shadow-md mt-2 ">
-          <Card>
+          <Card className="project_card">
             <Card.Img
               variant="top"
               src="https://image.freepik.com/free-photo/training-managers_1098-16067.jpg"
@@ -46,7 +46,7 @@ const Projects = () => {
           </Card>
         </Col>
         <Col lg={4} md={6} sm={12} className="project-card shadow-md mt-2">
-          <Card>
+          <Card className="project_card">
             <Card.Img
               variant="top"
               src="https://img.freepik.com/premium-photo/people-work-together-modern-office-as-teamwork-partner-double-exposure_207634-10822.jpg"
