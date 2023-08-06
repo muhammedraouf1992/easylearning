@@ -25,7 +25,7 @@ function NavbarComponent() {
       data-bs-theme={`${scrolled ? "light" : "dark"}`}
     >
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img src={scrolled ? logoblack : logoWhite} alt="" />
         </Navbar.Brand>
         <Navbar.Toggle
@@ -36,7 +36,7 @@ function NavbarComponent() {
           <Nav className="me-auto"></Nav>
           <Nav>
             <Nav.Link
-              href="#deets"
+              href="/"
               className={`text-uppercase navbar-links ${
                 scrolled ? "text-black" : "text-white"
               }`}
@@ -44,7 +44,7 @@ function NavbarComponent() {
               Home
             </Nav.Link>
             <Nav.Link
-              href="#deets"
+              href="/aboutme"
               className={`text-uppercase navbar-links ${
                 scrolled ? "text-black" : "text-white"
               }`}

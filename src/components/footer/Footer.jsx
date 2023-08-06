@@ -13,11 +13,11 @@ const Footer = () => {
     <div>
       <Container
         fluid={true}
-        className="mt-5 videoCard text-white text-capitalize text-center "
+        className="mt-5 text-white text-capitalize text-center footer_container"
       >
         <Row className="pt-3">
-          <Col lg={3} md={6} sm={12} className="mb-3">
-            <h2 className=" mb-3 ">follow us</h2>
+          <Col lg={3} md={6} sm={12} className="mt-4">
+            <h2 className="mb-3 footer_title">follow us</h2>
             <div className="d-flex gap-3 justify-content-center social">
               <a href="#" className="footer_links text-white">
                 <BsFacebook />
@@ -33,8 +33,8 @@ const Footer = () => {
               </a>
             </div>
           </Col>
-          <Col lg={3} md={6} sm={12}>
-            <h2 className="mb-3">address</h2>
+          <Col lg={3} md={6} sm={12} className="mt-4">
+            <h2 className="mb-3 footer_title">address</h2>
             <div className="footerDescription">
               <p>
                 <BsFillPinMapFill className="mx-2" />
@@ -50,8 +50,8 @@ const Footer = () => {
               </p>
             </div>
           </Col>
-          <Col lg={3} md={6} sm={12} className="">
-            <h2 className="mb-3">information</h2>
+          <Col lg={3} md={6} sm={12} className="mt-4">
+            <h2 className="mb-3 footer_title">information</h2>
             <a className="footer_links d-block my-2" href="#">
               About Me
             </a>
@@ -62,8 +62,8 @@ const Footer = () => {
               Contact Us
             </a>
           </Col>
-          <Col lg={3} md={6} sm={12}>
-            <h2 className="mb-3">policy</h2>
+          <Col lg={3} md={6} sm={12} className="mt-4">
+            <h2 className="mb-3 footer_title">policy</h2>
             <a className="footer_links d-block my-2" href="#">
               Fefund Policy
             </a>
