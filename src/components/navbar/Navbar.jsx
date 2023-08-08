@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logoblack from "../../assets/Image/logo_black.png";
 import logoWhite from "../../assets/Image/logo_white.png";
+import { NavLink } from "react-router-dom";
 function NavbarComponent() {
   const [scrolled, setScrolled] = useState(false);
   function onScroll() {
@@ -34,55 +35,55 @@ function NavbarComponent() {
         />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"></Nav>
-          <Nav>
-            <Nav.Link
-              href="/"
-              className={`text-uppercase navbar-links ${
+          <Nav className="d-flex gap-2 ">
+            <NavLink
+              to="/"
+              className={`text-uppercase  navbar-links ${
                 scrolled ? "text-black" : "text-white"
               }`}
             >
               Home
-            </Nav.Link>
-            <Nav.Link
-              href="/aboutme"
+            </NavLink>
+            <NavLink
+              to="/aboutme"
               className={`text-uppercase navbar-links ${
                 scrolled ? "text-black" : "text-white"
               }`}
             >
               About
-            </Nav.Link>
-            <Nav.Link
-              href="/services"
+            </NavLink>
+            <NavLink
+              to="/services"
               className={`text-uppercase navbar-links ${
                 scrolled ? "text-black" : "text-white"
               }`}
             >
               service
-            </Nav.Link>
-            <Nav.Link
-              href="/courses"
+            </NavLink>
+            <NavLink
+              to="/courses"
               className={`text-uppercase navbar-links ${
                 scrolled ? "text-black" : "text-white"
               }`}
             >
               courses
-            </Nav.Link>
-            <Nav.Link
-              href="/portfolio"
+            </NavLink>
+            <NavLink
+              to="/portfolio"
               className={`text-uppercase navbar-links ${
                 scrolled ? "text-black" : "text-white"
               }`}
             >
               portfolio
-            </Nav.Link>
-            <Nav.Link
-              href="/contact"
+            </NavLink>
+            <NavLink
+              to="/contact"
               className={`text-uppercase navbar-links ${
                 scrolled ? "text-black" : "text-white"
               }`}
             >
               contact us
-            </Nav.Link>
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

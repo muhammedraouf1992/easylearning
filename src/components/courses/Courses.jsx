@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Courses = () => {
   return (
@@ -28,9 +29,9 @@ const Courses = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a className="courseViewMore float-left" href="#">
+              <Link className="courseViewMore float-left" to="course_details">
                 View Details
-              </a>
+              </Link>
             </Col>
             <Col lg={6} md={12} sm={12}>
               <img
@@ -46,9 +47,9 @@ const Courses = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a className="" href="#">
+              <Link className="" to="/course_details">
                 View Details
-              </a>
+              </Link>
             </Col>
           </Row>
         </Col>
@@ -69,9 +70,9 @@ const Courses = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a className="courseViewMore float-left" href="#">
+              <Link className="courseViewMore float-left" to="/course_details">
                 View Details
-              </a>
+              </Link>
             </Col>
             <Col lg={6} md={12} sm={12}>
               <img

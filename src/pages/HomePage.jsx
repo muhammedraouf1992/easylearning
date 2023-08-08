@@ -10,11 +10,13 @@ import Video from "../components/video/Video";
 import Testimonial from "../components/testimonial/Testimonial";
 import AboutMe from "../components/aboutMe/AboutMe";
 import Footer from "../components/footer/Footer";
+import Welcome from "../components/welcome/Welcome";
 const HomePage = () => {
   return (
     <div>
       <NavbarComponent />
       <TopBanner />
+      <Welcome />
       <Services />
       <Analysis />
       <Summary />

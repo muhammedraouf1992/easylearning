@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 const Projects = () => {
   return (
     <Container className="my-5">
@@ -25,7 +26,11 @@ const Projects = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="primary">
+                <Link className="project_links" to={"/project_details"}>
+                  view more
+                </Link>
+              </Button>
             </Card.Body>
           </Card>
         </Col>
@@ -41,7 +46,11 @@ const Projects = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="primary">
+                <Link className="project_links" to={"/project_details"}>
+                  view more
+                </Link>
+              </Button>
             </Card.Body>
           </Card>
         </Col>
@@ -57,7 +66,11 @@ const Projects = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="primary">
+                <Link className="project_links" to={"/project_details"}>
+                  view more
+                </Link>
+              </Button>
             </Card.Body>
           </Card>
         </Col>

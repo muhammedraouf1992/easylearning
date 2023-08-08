@@ -46,6 +46,7 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 700 !important;
   font-size: 14px !important;
+  text-decoration: none;
 }
 
 .summaryBanner {
@@ -92,6 +93,9 @@
   .videoCard {
     height: 400px !important;
   }
+  .welcome_sm_img {
+    max-width: 40%;
+  }
 }
 .videoIcon {
   font-size: 72px;
@@ -129,7 +133,8 @@ img {
 .footer_links:hover {
   color: rgb(255, 230, 0) !important;
 }
-.footer_links {
+.footer_links,
+.project_links {
   transition: all 0.3s;
   color: white !important;
   text-decoration: none;
@@ -176,4 +181,97 @@ img {
 h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+}
+.active {
+  color: yellow !important;
+}
+.welcome_title::after {
+  content: "";
+  width: 5%;
+  height: 2px;
+  position: absolute;
+  background: #000;
+  right: 35%;
+  top: 50%;
+}
+.welcome_title {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+}
+.welcome_title::before {
+  content: "";
+  width: 5%;
+  height: 2px;
+  position: absolute;
+  background: #000;
+  left: 35%;
+  top: 50%;
+}
+.welcome_heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.c_heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 20px;
+  margin-top: 20px;
+  z-index: 400;
+}
+.c_subheading {
+  font-family: "Montserrat", sans-serif;
+  color: #505050;
+  font-size: 14px;
+}
+.margin_top {
+  margin-top: 3rem !important;
+}
+.welcome_container {
+  margin-top: -70px;
+  z-index: 200;
+  background-color: white;
+}
+.welcome_footer_container {
+  background-color: goldenrod;
+}
+.welcome_footer_img {
+  padding: 2rem;
+}
+.project_img {
+  position: relative;
+  z-index: 100;
+}
+.project_img::before {
+  content: "";
+  position: absolute;
+  right: -8%;
+  top: 5%;
+  width: 100%;
+  height: 90%;
+  background: goldenrod;
+  z-index: -10;
+  border-radius: 20px;
+}
+ul li span {
+  font-weight: 700;
+  margin: 0 5px;
+}
+ul {
+  list-style: none;
+}
+.course_details_footer {
+  background-color: #71deff;
+  text-align: center;
+  padding: 2rem 0;
+}
+.course_details_footer p {
+  font-family: "Raleway";
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 18px;
+  
 }

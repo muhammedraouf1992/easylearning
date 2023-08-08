@@ -5,6 +5,8 @@ import CoursesPage from "./pages/CoursesPage";
 import Portfolio from "./pages/Portfolio";
 import ContactPage from "./pages/ContactPage";
 import ServicesPage from "./pages/ServicesPage";
+import ProjectDetailsPage from "./pages/ProjectDetailsPage";
+import CourseDetailsPage from "./pages/CourseDetailsPage";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
   {
     path: "/services",
     element: <ServicesPage />,
+  },
+  {
+    path: "/project_details",
+    element: <ProjectDetailsPage />,
+  },
+  {
+    path: "/course_details",
+    element: <CourseDetailsPage />,
   },
 ]);
 export default router;
