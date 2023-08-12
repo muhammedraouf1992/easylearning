@@ -13,6 +13,6 @@ class HomePageController extends Controller
     public function index()
     {
         $data = HomePage::all();
-        return $data;
+        return response()->json($data);
     }
 }

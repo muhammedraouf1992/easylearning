@@ -11,6 +11,6 @@ class ClientReviewController extends Controller
     public function index()
     {
         $data = ClientReview::all();
-        return $data;
+        return response()->json($data);
     }
 }

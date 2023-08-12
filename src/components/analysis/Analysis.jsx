@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import {
   BarChart,
@@ -12,16 +13,24 @@ import {
 } from "recharts";
 
 const Analysis = () => {
-  const data = [
-    { Techonology: "PHP", Projects: 100 },
-    { Techonology: "MySqli", Projects: 90 },
-    { Techonology: "Laravel", Projects: 95 },
-    { Techonology: "React", Projects: 85 },
-    { Techonology: "Opencart", Projects: 80 },
-    { Techonology: "Vue Js", Projects: 70 },
-    // { Techonology: "Django", Projects: 60 },
-    { Techonology: "JavaScript", Projects: 100 },
-  ];
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`http://127.0.0.1:8000/api/charts`)
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  let analysisData = [];
+  data.map((d) => {
+    const newObj = { Techonology: d.x_data, Projects: d.y_data };
+    analysisData = [...analysisData, newObj];
+  });
   return (
     <Container className="my-5">
       <Row>
@@ -34,11 +43,11 @@ const Analysis = () => {
       <Row className="mt-5">
         <Col lg={6} md={12} sm={12}>
           <ResponsiveContainer>
-            <BarChart width={100} height={100} data={data}>
+            <BarChart width={100} height={100} data={analysisData}>
               <XAxis dataKey="Techonology" stroke="#8884d8" />
 
               <Tooltip
-                wrapperStyle={{ width: 100, backgroundColor: "#8884d8" }}
+                wrapperStyle={{ width: 150, backgroundColor: "#8884d8" }}
               />
 
               <Bar dataKey="Projects" fill="#8884d8" barSize={40} />

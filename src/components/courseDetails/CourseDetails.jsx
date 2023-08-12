@@ -1,27 +1,31 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import courseImg from "../../assets/Image/summary.jpg";
 import { AiFillCheckSquare } from "react-icons/ai";
+import { useParams } from "react-router-dom";
 const CourseDetails = () => {
+  const [data, setData] = useState({});
+  const params = useParams();
+  useEffect(() => {
+    axios
+      .get(`http://127.0.0.1:8000/api/courses/${params.id}`)
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
   return (
     <Container className="mt-5">
       <Row>
         <Col lg={8} md={12} sm={12}>
-          <h1 className="c_heading">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          </h1>
+          <h1 className="c_heading">{data.long_title}</h1>
           <div>
-            <img src={courseImg} alt="" />
+            <img src={data.short_image} alt="" />
           </div>
-          <p className="descr mt-3">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
-            soluta eum facilis consequatur aut magni officiis reiciendis cum
-            eius quas voluptas mollitia ex nisi labore placeat earum dignissimos
-            omnis sapiente optio ad, sequi quod impedit sint molestias. Corporis
-            fugit nemo provident totam ipsam quam eius est. Velit, dolorem quae
-            repudiandae et ut excepturi totam perferendis facere corrupti
-            voluptatibus modi. Illum?
-          </p>
+          <p className="descr mt-3">{data.long_description}</p>
         </Col>
         <Col lg={4} md={12} sm={12}>
           <div className="border py-2">
@@ -32,17 +36,17 @@ const CourseDetails = () => {
               <li>
                 <AiFillCheckSquare />
                 <span className="">Enrolled: </span>
-                1200 students
+                {data.student} students
               </li>
               <li>
                 <AiFillCheckSquare />
                 <span>duration: </span>
-                1200 students
+                {data.duration} students
               </li>
               <li>
                 <AiFillCheckSquare />
                 <span>lectures: </span>
-                1200 students
+                {data.lectures} students
               </li>
               <li>
                 <AiFillCheckSquare />

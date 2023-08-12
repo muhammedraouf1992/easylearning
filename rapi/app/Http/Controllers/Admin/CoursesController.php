@@ -11,10 +11,10 @@ class CoursesController extends Controller
     public function index()
     {
         $data = Course::all();
-        return $data;
+        return response()->json($data);
     }
     public function show(Course $course)
     {
-        return $course;
+        return response()->json($course);
     }
 }

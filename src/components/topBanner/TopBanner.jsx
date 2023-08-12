@@ -5,14 +5,13 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
-import backgroundImage from "../../assets/Image/banner.jpg";
+
 const TopBanner = () => {
   const [home, setHome] = useState({});
   useEffect(() => {
     axios
       .get("http://127.0.0.1:8000/api/homePage")
       .then((response) => {
-        console.log(response.data[0]);
         setHome(response.data[0]);
       })
       .catch((error) => {

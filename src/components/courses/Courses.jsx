@@ -1,8 +1,21 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Courses = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`http://127.0.0.1:8000/api/courses`)
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
   return (
     <Container className="my-5">
       <Row>
@@ -13,48 +26,32 @@ const Courses = () => {
         </div>
       </Row>
       <Row className="mt-5">
-        <Col lg={6} md={12} sm={12}>
-          <Row>
-            <Col lg={6} md={12} sm={12}>
-              <img
-                src="https://image.freepik.com/free-photo/coach-by-whiteboard_1098-12970.jpg"
-                alt=""
-                style={{ width: "100%" }}
-                className="p-2"
-              />
-            </Col>
-            <Col lg={6} md={12} sm={12} className="mt-2">
-              <h5 className="text-justify sub-title">Laravel 8 </h5>
-              <p className="text-justify descr">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <Link className="courseViewMore float-left" to="course_details">
-                View Details
-              </Link>
-            </Col>
-            <Col lg={6} md={12} sm={12}>
-              <img
-                src="https://image.freepik.com/free-photo/shocked-male-student-poses-desktop-home-office-uses-laptop-computer-searching-online-education-course-browses-distance-learning-website_273609-34548.jpg"
-                alt=""
-                style={{ width: "100%" }}
-                className="p-2"
-              />
-            </Col>
-            <Col lg={6} md={12} sm={12} className="mt-2">
-              <h5 className="text-justify sub-title">Laravel 8 </h5>
-              <p className="text-justify descr">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <Link className="" to="/course_details">
-                View Details
-              </Link>
-            </Col>
-          </Row>
-        </Col>
+        {data.map((d) => (
+          <Col lg={6} md={12} sm={12} key={d.id}>
+            <Row>
+              <Col lg={6} md={12} sm={12}>
+                <img
+                  src={d.short_image}
+                  alt=""
+                  style={{ width: "100%" }}
+                  className="p-2"
+                />
+              </Col>
+              <Col lg={6} md={12} sm={12} className="mt-2">
+                <h5 className="text-justify sub-title">{d.short_title} </h5>
+                <p className="text-justify descr">{d.short_description}</p>
+                <Link
+                  className="courseViewMore float-left"
+                  to={"/courses/" + d.id}
+                >
+                  View Details
+                </Link>
+              </Col>
+            </Row>
+          </Col>
+        ))}
 
-        <Col lg={6} md={12} sm={12}>
+        {/* <Col lg={6} md={12} sm={12}>
           <Row>
             <Col lg={6} md={12} sm={12}>
               <img
@@ -93,7 +90,7 @@ const Courses = () => {
               </a>
             </Col>
           </Row>
-        </Col>
+        </Col> */}
       </Row>
     </Container>
   );

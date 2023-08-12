@@ -11,6 +11,6 @@ class ChartController extends Controller
     public function index()
     {
         $data = Chart::all();
-        return $data;
+        return response()->json($data);
     }
 }

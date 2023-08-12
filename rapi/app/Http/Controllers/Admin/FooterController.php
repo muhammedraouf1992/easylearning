@@ -11,6 +11,6 @@ class FooterController extends Controller
     public function index()
     {
         $data = Footer::all();
-        return $data;
+        return response()->json($data);
     }
 }

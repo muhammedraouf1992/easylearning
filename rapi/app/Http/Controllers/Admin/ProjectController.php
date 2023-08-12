@@ -12,10 +12,10 @@ class ProjectController extends Controller
     public function index()
     {
         $data = Project::all();
-        return $data;
+        return response()->json($data);
     }
     public function show(Project $project)
     {
-        return $project;
+        return response()->json($project);
     }
 }

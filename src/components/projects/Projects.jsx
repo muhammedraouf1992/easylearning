@@ -1,9 +1,21 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 const Projects = () => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios
+      .get(`http://127.0.0.1:8000/api/projects`)
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
   return (
     <Container className="my-5">
       <Row>
@@ -14,66 +26,28 @@ const Projects = () => {
         </div>
       </Row>
       <Row className="mt-5">
-        <Col lg={4} md={6} sm={12} className="project-card shadow-md mt-2">
-          <Card className="project_card">
-            <Card.Img
-              variant="top"
-              src="https://image.freepik.com/free-photo/shocked-male-student-poses-desktop-home-office-uses-laptop-computer-searching-online-education-course-browses-distance-learning-website_273609-34548.jpg"
-            />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-              <Button variant="primary">
-                <Link className="project_links" to={"/project_details"}>
-                  view more
-                </Link>
-              </Button>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col lg={4} md={6} sm={12} className="project-card shadow-md mt-2 ">
-          <Card className="project_card">
-            <Card.Img
-              variant="top"
-              src="https://image.freepik.com/free-photo/training-managers_1098-16067.jpg"
-            />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-              <Button variant="primary">
-                <Link className="project_links" to={"/project_details"}>
-                  view more
-                </Link>
-              </Button>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col lg={4} md={6} sm={12} className="project-card shadow-md mt-2">
-          <Card className="project_card">
-            <Card.Img
-              variant="top"
-              src="https://img.freepik.com/premium-photo/people-work-together-modern-office-as-teamwork-partner-double-exposure_207634-10822.jpg"
-            />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-              <Button variant="primary">
-                <Link className="project_links" to={"/project_details"}>
-                  view more
-                </Link>
-              </Button>
-            </Card.Body>
-          </Card>
-        </Col>
+        {data.map((d) => (
+          <Col
+            lg={4}
+            md={6}
+            sm={12}
+            className="project-card shadow-md mt-2"
+            key={d.id}
+          >
+            <Card className="project_card">
+              <Card.Img variant="top" src={d.image_one} />
+              <Card.Body>
+                <Card.Title>{d.project_name}</Card.Title>
+                <Card.Text>{d.project_description}</Card.Text>
+                <Button variant="primary">
+                  <Link className="project_links" to={`/projects/${d.id}`}>
+                    view more
+                  </Link>
+                </Button>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
       </Row>
     </Container>
   );
