@@ -1,6 +1,6 @@
 .topBanner {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("./assets/Image/banner.jpg");
+  /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./assets/Image/banner.jpg"); */
   background-attachment: fixed;
   background-position: center;
   min-height: 550px;
@@ -273,5 +273,4 @@ ul {
   font-weight: 700;
   text-transform: capitalize;
   font-size: 18px;
-  
 }
