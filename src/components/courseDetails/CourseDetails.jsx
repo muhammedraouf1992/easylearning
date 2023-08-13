@@ -1,22 +1,9 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
-import courseImg from "../../assets/Image/summary.jpg";
+
 import { AiFillCheckSquare } from "react-icons/ai";
-import { useParams } from "react-router-dom";
-const CourseDetails = () => {
-  const [data, setData] = useState({});
-  const params = useParams();
-  useEffect(() => {
-    axios
-      .get(`http://127.0.0.1:8000/api/courses/${params.id}`)
-      .then((response) => {
-        setData(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+
+const CourseDetails = ({ data }) => {
   return (
     <Container className="mt-5">
       <Row>

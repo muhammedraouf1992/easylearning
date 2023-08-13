@@ -1,22 +1,9 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import projectImg from "../../assets/Image/pdetails.png";
+
 import { AiFillCheckSquare } from "react-icons/ai";
-import { useParams } from "react-router-dom";
-const ProjectDetails = () => {
-  const [data, setData] = useState({});
-  const params = useParams();
-  useEffect(() => {
-    axios
-      .get(`http://127.0.0.1:8000/api/projects/${params.id}`)
-      .then((response) => {
-        setData(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+
+const ProjectDetails = ({ data }) => {
   return (
     <Container className="my-5 py-5">
       <Row>

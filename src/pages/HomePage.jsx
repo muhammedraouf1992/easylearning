@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Analysis from "../components/analysis/Analysis";
 import NavbarComponent from "../components/navbar/Navbar";
 import Services from "../components/services/Services";
@@ -12,6 +12,9 @@ import AboutMe from "../components/aboutMe/AboutMe";
 import Footer from "../components/footer/Footer";
 import Welcome from "../components/welcome/Welcome";
 const HomePage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <NavbarComponent />
