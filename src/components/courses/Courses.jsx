@@ -3,10 +3,11 @@ import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Loading from "../loading/Loading";
-
+import Error from "../error/Error";
 const Courses = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState();
   useEffect(() => {
     setLoading(true);
     axios
@@ -15,14 +16,18 @@ const Courses = () => {
         setData(response.data);
         setLoading(false);
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(({ response }) => {
+        setErrors(response.data.message);
         setLoading(false);
       });
   }, []);
+  if (errors) {
+    return <Error error={errors} />;
+  }
   if (loading) {
     return <Loading />;
   }
+
   return (
     <Container className="my-5">
       <Row>

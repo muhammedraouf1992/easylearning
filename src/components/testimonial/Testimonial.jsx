@@ -5,9 +5,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Loading from "../loading/Loading";
+import Error from "../error/Error";
 const Testimonial = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState();
   useEffect(() => {
     setLoading(true);
     axios
@@ -16,8 +18,8 @@ const Testimonial = () => {
         setData(response.data);
         setLoading(false);
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(({ response }) => {
+        setErrors(response.data.message);
         setLoading(false);
       });
   }, []);
@@ -60,6 +62,9 @@ const Testimonial = () => {
       },
     ],
   };
+  if (errors) {
+    return <Error error={errors} />;
+  }
   if (loading) {
     return <Loading />;
   }

@@ -3,8 +3,12 @@ import { Col, Container, Row } from "react-bootstrap";
 
 import { AiFillCheckSquare } from "react-icons/ai";
 import Loading from "../loading/Loading";
+import Error from "../error/Error";
 
-const ProjectDetails = ({ data, loading }) => {
+const ProjectDetails = ({ data, loading, errors }) => {
+  if (errors) {
+    return <Error error={errors} />;
+  }
   if (loading) {
     return <Loading />;
   }

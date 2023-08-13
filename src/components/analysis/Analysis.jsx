@@ -12,10 +12,12 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import Loading from "../loading/Loading";
+import Error from "../error/Error";
 
 const Analysis = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState();
   useEffect(() => {
     setLoading(true);
     axios
@@ -24,8 +26,8 @@ const Analysis = () => {
         setData(response.data);
         setLoading(false);
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(({ response }) => {
+        setErrors(response.data.message);
         setLoading(false);
       });
   }, []);
@@ -35,6 +37,9 @@ const Analysis = () => {
     const newObj = { Techonology: d.x_data, Projects: d.y_data };
     analysisData = [...analysisData, newObj];
   });
+  if (errors) {
+    return <Error error={errors} />;
+  }
   if (loading) {
     return <Loading />;
   }

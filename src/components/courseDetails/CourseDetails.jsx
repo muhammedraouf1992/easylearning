@@ -3,7 +3,11 @@ import { Col, Container, Row, Button } from "react-bootstrap";
 
 import { AiFillCheckSquare } from "react-icons/ai";
 import Loading from "../loading/Loading";
-const CourseDetails = ({ data, loading }) => {
+import Error from "../error/Error";
+const CourseDetails = ({ data, loading, errors }) => {
+  if (errors) {
+    return <Error error={errors} />;
+  }
   if (loading) {
     return <Loading />;
   }

@@ -9,6 +9,7 @@ import axios from "axios";
 const CourseDetailsPage = () => {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState();
   const params = useParams();
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -19,16 +20,16 @@ const CourseDetailsPage = () => {
         setData(response.data);
         setLoading(false);
       })
-      .catch((error) => {
+      .catch(({ response }) => {
+        setErrors(response.data.message);
         setLoading(false);
-        console.log(error);
       });
   }, []);
   return (
     <div>
       <NavbarComponent />
       <AboutBanner pageTitle={data.short_title} />
-      <CourseDetails data={data} loading={loading} />
+      <CourseDetails data={data} loading={loading} errors={errors} />
       <Footer />
     </div>
   );

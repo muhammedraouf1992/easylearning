@@ -8,6 +8,7 @@ import Loading from "../loading/Loading";
 const Projects = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState();
   useEffect(() => {
     setLoading(true);
     axios
@@ -16,11 +17,14 @@ const Projects = () => {
         setData(response.data);
         setLoading(false);
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(({ response }) => {
+        setErrors(response.data.message);
         setLoading(false);
       });
   }, []);
+  if (errors) {
+    return <Error error={errors} />;
+  }
   if (loading) {
     return <Loading />;
   }

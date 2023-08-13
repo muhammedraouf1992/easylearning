@@ -6,10 +6,12 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
 import Loading from "../loading/Loading";
+import Error from "../error/Error";
 
 const TopBanner = () => {
   const [home, setHome] = useState({});
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState();
   useEffect(() => {
     setLoading(true);
     axios
@@ -18,11 +20,14 @@ const TopBanner = () => {
         setHome(response.data[0]);
         setLoading(false);
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(({ response }) => {
+        setErrors(response.data.message);
         setLoading(false);
       });
   }, []);
+  if (errors) {
+    return <Error error={errors} />;
+  }
   if (loading) {
     return <Loading />;
   }
