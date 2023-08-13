@@ -2,20 +2,27 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Loading from "../loading/Loading";
 
 const Courses = () => {
   const [data, setData] = useState([]);
-
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
+    setLoading(true);
     axios
       .get(`http://127.0.0.1:8000/api/courses`)
       .then((response) => {
         setData(response.data);
+        setLoading(false);
       })
       .catch((error) => {
         console.log(error);
+        setLoading(false);
       });
   }, []);
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <Container className="my-5">
       <Row>

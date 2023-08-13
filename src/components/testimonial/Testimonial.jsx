@@ -4,17 +4,21 @@ import { Col, Container, Row } from "react-bootstrap";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import Loading from "../loading/Loading";
 const Testimonial = () => {
   const [data, setData] = useState([]);
-
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
+    setLoading(true);
     axios
       .get(`http://127.0.0.1:8000/api/reviews`)
       .then((response) => {
         setData(response.data);
+        setLoading(false);
       })
       .catch((error) => {
         console.log(error);
+        setLoading(false);
       });
   }, []);
   var settings = {
@@ -56,6 +60,9 @@ const Testimonial = () => {
       },
     ],
   };
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <Container
       fluid={true}

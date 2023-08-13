@@ -7,6 +7,7 @@ import ContactPage from "./pages/ContactPage";
 import ServicesPage from "./pages/ServicesPage";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 import CourseDetailsPage from "./pages/CourseDetailsPage";
+import Loading from "./components/loading/Loading";
 
 const router = createBrowserRouter([
   {

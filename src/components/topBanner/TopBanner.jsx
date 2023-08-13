@@ -5,19 +5,27 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
+import Loading from "../loading/Loading";
 
 const TopBanner = () => {
   const [home, setHome] = useState({});
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
+    setLoading(true);
     axios
       .get("http://127.0.0.1:8000/api/homePage")
       .then((response) => {
         setHome(response.data[0]);
+        setLoading(false);
       })
       .catch((error) => {
         console.log(error);
+        setLoading(false);
       });
   }, []);
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <Container
       fluid={true}

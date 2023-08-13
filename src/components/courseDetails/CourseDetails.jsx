@@ -2,8 +2,11 @@ import React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 
 import { AiFillCheckSquare } from "react-icons/ai";
-
-const CourseDetails = ({ data }) => {
+import Loading from "../loading/Loading";
+const CourseDetails = ({ data, loading }) => {
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <Container className="mt-5">
       <Row>

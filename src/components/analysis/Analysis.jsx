@@ -11,18 +11,22 @@ import {
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts";
+import Loading from "../loading/Loading";
 
 const Analysis = () => {
   const [data, setData] = useState([]);
-
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
+    setLoading(true);
     axios
       .get(`http://127.0.0.1:8000/api/charts`)
       .then((response) => {
         setData(response.data);
+        setLoading(false);
       })
       .catch((error) => {
         console.log(error);
+        setLoading(false);
       });
   }, []);
 
@@ -31,6 +35,9 @@ const Analysis = () => {
     const newObj = { Techonology: d.x_data, Projects: d.y_data };
     analysisData = [...analysisData, newObj];
   });
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <Container className="my-5">
       <Row>

@@ -8,15 +8,19 @@ import axios from "axios";
 
 const ProjectDetailsPage = () => {
   const [data, setData] = useState({});
+  const [loading, setLoading] = useState(false);
   const params = useParams();
   useEffect(() => {
     window.scrollTo(0, 0);
+    setLoading(true);
     axios
       .get(`http://127.0.0.1:8000/api/projects/${params.id}`)
       .then((response) => {
         setData(response.data);
+        setLoading(false);
       })
       .catch((error) => {
+        setLoading(false);
         console.log(error);
       });
   }, []);
@@ -25,7 +29,7 @@ const ProjectDetailsPage = () => {
     <div>
       <NavbarComponent />
       <AboutBanner pageTitle={data.project_name} />
-      <ProjectDetails data={data} />
+      <ProjectDetails data={data} loading={loading} />
       <Footer />
     </div>
   );

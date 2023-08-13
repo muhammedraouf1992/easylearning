@@ -32,11 +32,6 @@ const Summary = () => {
     }
   }
 
-  // useEffect(() => {
-  //   countStudent(studentValue);
-  //   countReviews(reviewsValue);
-  //   countCourses(coursesValues);
-  // }, [courses, student, reviews]);
   return (
     <Container fluid={true} className="summaryBanner my-5">
       <Row>
