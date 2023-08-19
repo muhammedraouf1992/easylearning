@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 import axios from "axios";
 import Loading from "../loading/Loading";
 import Error from "../error/Error";
-
+import { Fade, Bounce, JackInTheBox } from "react-awesome-reveal";
 const TopBanner = () => {
   const [home, setHome] = useState({});
   const [loading, setLoading] = useState(false);
@@ -42,11 +42,13 @@ const TopBanner = () => {
     >
       <Row className=" text-center text-white">
         <Col className="">
-          <h1 className="text-uppercase title">{home.home_title}</h1>
-          <h4 className="text-capitalize fs-5 my-3">{home.home_subtitle}</h4>
-          <Button variant="primary" className="mt-2">
-            Learn More
-          </Button>
+          <JackInTheBox cascade>
+            <h1 className="text-uppercase title">{home.home_title}</h1>
+            <h4 className="text-capitalize fs-5 my-3">{home.home_subtitle}</h4>
+            <Button variant="primary" className="mt-2">
+              Learn More
+            </Button>
+          </JackInTheBox>
         </Col>
       </Row>
     </Container>

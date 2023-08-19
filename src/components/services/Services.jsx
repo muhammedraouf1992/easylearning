@@ -43,7 +43,7 @@ const Services = () => {
               <Card className="text-center py-3 shadow-md">
                 <div>
                   <img
-                    src={`../../src/${d.service_image}`}
+                    src={`http://127.0.0.1:8000/${d.service_image}`}
                     alt=""
                     className="serviceIcon"
                   />
