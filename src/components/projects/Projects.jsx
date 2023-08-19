@@ -47,7 +47,10 @@ const Projects = () => {
             key={d.id}
           >
             <Card className="project_card">
-              <Card.Img variant="top" src={d.image_one} />
+              <Card.Img
+                variant="top"
+                src={`http://127.0.0.1:8000/${d.image_one}`}
+              />
               <Card.Body>
                 <Card.Title>{d.project_name}</Card.Title>
                 <Card.Text>{d.project_description}</Card.Text>

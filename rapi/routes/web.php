@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
@@ -39,4 +40,12 @@ Route::prefix('services')->group(function () {
     Route::get('/{service}', [ServiceController::class, 'edit'])->name('servicesEdit');
     Route::put('/{service}', [ServiceController::class, 'update'])->name('servicesUpdate');
     Route::delete('/{service}', [ServiceController::class, 'delete'])->name('servicesDelete');
+});
+Route::prefix('projects')->group(function () {
+    Route::get('/', [ProjectController::class, 'webIndex'])->name('allProjects');
+    Route::get('/create', [ProjectController::class, 'create'])->name('addProject');
+    Route::post('/', [ProjectController::class, 'store'])->name('storeProject');
+    Route::get('/{project}/edit', [ProjectController::class, 'edit'])->name('editProject');
+    Route::put('/{project}', [ProjectController::class, 'update'])->name('updateProject');
+    Route::delete('/{project}', [ProjectController::class, 'delete'])->name('deleteProject');
 });
