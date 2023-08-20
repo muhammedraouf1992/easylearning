@@ -14,7 +14,7 @@ import {
 import Loading from "../loading/Loading";
 import Error from "../error/Error";
 
-const Analysis = () => {
+const Analysis = ({ home }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState();
@@ -68,25 +68,7 @@ const Analysis = () => {
         </Col>
         <Col lg={6} md={12} sm={12}>
           <div className="descr">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              ipsa labore laborum! Rem repellat hic perspiciatis dolorum soluta
-              maiores doloremque sed voluptas impedit quidem. Autem qui itaque
-              illum tempora magnam distinctio debitis repudiandae vero dolores
-              accusantium consequatur error, eos delectus, perferendis
-            </p>
-            <p>
-              assumenda, animi eligendi id quas atque nisi libero porro
-              doloremque. Facilis, obcaecati maxime perferendis corrupti rerum
-              fuga cupiditate quod voluptates commodi culpa reprehenderit,
-              dolore aliquam dolores facere, fugiat autem in voluptatibus
-            </p>
-            <p>
-              voluptatum earum itaque magnam ea a consequuntur? Possimus ullam
-              officiis natus blanditiis dolorum expedita deserunt quidem. Non,
-              iure. Reprehenderit quisquam facere dolor, numquam blanditiis
-              repudiandae ea necessitatibus voluptates?
-            </p>
+            <p>{home.tech_description}</p>
           </div>
         </Col>
       </Row>

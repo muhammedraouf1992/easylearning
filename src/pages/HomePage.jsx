@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Analysis from "../components/analysis/Analysis";
 import NavbarComponent from "../components/navbar/Navbar";
 import Services from "../components/services/Services";
@@ -11,17 +11,33 @@ import Testimonial from "../components/testimonial/Testimonial";
 import AboutMe from "../components/aboutMe/AboutMe";
 import Footer from "../components/footer/Footer";
 import Welcome from "../components/welcome/Welcome";
+import axios from "axios";
+
 const HomePage = () => {
+  const [home, setHome] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState();
   useEffect(() => {
     window.scrollTo(0, 0);
+    setLoading(true);
+    axios
+      .get("http://127.0.0.1:8000/api/homePage")
+      .then((response) => {
+        setHome(response.data[0]);
+        setLoading(false);
+      })
+      .catch(({ response }) => {
+        setErrors(response.data.message);
+        setLoading(false);
+      });
   }, []);
   return (
     <div>
       <NavbarComponent />
-      <TopBanner />
+      <TopBanner home={home} loading={loading} errors={errors} />
       <Welcome />
       <Services />
-      <Analysis />
+      <Analysis home={home} />
       <Summary />
       <Projects />
       <Courses />

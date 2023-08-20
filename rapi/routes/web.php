@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\CoursesController;
+use App\Http\Controllers\Admin\HomePageController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\AdminController;
@@ -48,4 +50,19 @@ Route::prefix('projects')->group(function () {
     Route::get('/{project}/edit', [ProjectController::class, 'edit'])->name('editProject');
     Route::put('/{project}', [ProjectController::class, 'update'])->name('updateProject');
     Route::delete('/{project}', [ProjectController::class, 'delete'])->name('deleteProject');
+});
+
+Route::prefix('courses')->group(function () {
+    Route::get('/', [CoursesController::class, 'webIndex'])->name('allCourses');
+    Route::get('/create', [CoursesController::class, 'create'])->name('addCourse');
+    Route::post('/', [CoursesController::class, 'store'])->name('storeCourse');
+    Route::get('/{course}/edit', [CoursesController::class, 'edit'])->name('editCourse');
+    Route::put('/{course}', [CoursesController::class, 'update'])->name('updateCourse');
+    Route::delete('/{course}', [CoursesController::class, 'delete'])->name('deleteCourse');
+});
+
+Route::prefix('home')->group(function () {
+    Route::get('/', [HomePageController::class, 'webIndex'])->name('allHome');
+    Route::get('/{home}/edit', [HomePageController::class, 'edit'])->name('editHome');
+    Route::put('/{home}', [HomePageController::class, 'update'])->name('updateHome');
 });

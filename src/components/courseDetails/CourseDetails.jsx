@@ -17,7 +17,7 @@ const CourseDetails = ({ data, loading, errors }) => {
         <Col lg={8} md={12} sm={12}>
           <h1 className="c_heading">{data.long_title}</h1>
           <div>
-            <img src={data.short_image} alt="" />
+            <img src={`http://127.0.0.1:8000/${data.short_image}`} alt="" />
           </div>
           <p className="descr mt-3">{data.long_description}</p>
         </Col>

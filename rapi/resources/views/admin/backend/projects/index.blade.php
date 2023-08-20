@@ -4,28 +4,19 @@
     <div class="content-body" style="min-height: 788px;">
                 <div class="container-fluid">
                     <!-- Add Project -->
-                    <div class="modal fade" id="addProjectSidebar">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-    
-    
-                                </div>
-                                <div class="modal-body">
-    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="row page-titles mx-0">
                         <div class="col-sm-6 p-md-0">
                             <div class="welcome-text">
-    
-    
+                                <h4>Hi {{auth()->user()->name}} welcome back!</h4>
+                                <span>React</span>
                             </div>
                         </div>
                         <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
-    
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="javascript:void(0)">Form</a></li>
+                                <li class="breadcrumb-item active"><a href="javascript:void(0)">Element</a></li>
+                            </ol>
                         </div>
                     </div>
                     <!-- row -->

@@ -43,6 +43,25 @@
 
                 </ul>
             </li>
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-003-diamond"></i>
+                    <span class="nav-text">Courses</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{route('allCourses')}}">All Courses</a></li>
+                    <li><a href="{{route('addCourse')}}">Add Course</a></li>                
+                </ul>
+            </li>
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-003-diamond"></i>
+                    <span class="nav-text">Home Elements</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{route('allHome')}}">Home elements</a></li>                                  
+                </ul>
+            </li>
            
            
         </ul>

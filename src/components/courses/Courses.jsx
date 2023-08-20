@@ -40,14 +40,16 @@ const Courses = () => {
       <Row className="mt-5">
         {data.map((d) => (
           <Col lg={6} md={12} sm={12} key={d.id}>
-            <Row>
+            <Row className="align-items-center">
               <Col lg={6} md={12} sm={12}>
-                <img
-                  src={d.short_image}
-                  alt=""
-                  style={{ width: "100%" }}
-                  className="p-2"
-                />
+                <div className="justify-content-end">
+                  <img
+                    src={`http://127.0.0.1:8000/${d.short_image}`}
+                    alt=""
+                    style={{ width: "70%" }}
+                    className="p-2"
+                  />
+                </div>
               </Col>
               <Col lg={6} md={12} sm={12} className="mt-2">
                 <h5 className="text-justify sub-title">{d.short_title} </h5>
