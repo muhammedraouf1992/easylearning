@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 15, 2023 at 06:54 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- Generation Time: Aug 20, 2023 at 02:43 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -114,9 +114,9 @@ CREATE TABLE `courses` (
 --
 
 INSERT INTO `courses` (`id`, `short_title`, `short_description`, `short_image`, `long_title`, `long_description`, `duration`, `lectures`, `student`, `skill_all`, `video_url`, `created_at`, `updated_at`) VALUES
-(1, 'course title', 'this is the short course description for the first course', 'https://image.freepik.com/free-photo/coach-by-whiteboard_1098-12970.jpg', 'Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit.\r\n', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, soluta eum facilis consequatur aut magni officiis reiciendis cum eius quas voluptas mollitia ex nisi labore placeat earum dignissimos omnis sapiente optio ad, sequi quod impedit sint molestias. Corporis fugit nemo provident totam ipsam quam eius est. Velit, dolorem quae repudiandae et ut excepturi totam perferendis facere corrupti voluptatibus modi. Illum?\r\n\r\n', '600', '12', '1600', 'course one skills', 'course one video', NULL, NULL),
-(2, 'course two title', 'course two description', 'https://image.freepik.com/free-photo/shocked-male-student-poses-desktop-home-office-uses-laptop-computer-searching-online-education-course-browses-distance-learning-website_273609-34548.jpg', 'course two long title', 'course two long descriptions', '12', '15', '2121', 'course two skills', 'course two video', NULL, NULL),
-(3, 'course three short title', 'course three short description', 'https://image.freepik.com/free-photo/shocked-male-student-poses-desktop-home-office-uses-laptop-computer-searching-online-education-course-browses-distance-learning-website_273609-34548.jpg', 'course three long title', 'course three long description', '12', '14', '151', 'course three skills', 'course three video', NULL, NULL);
+(1, 'course title', 'this is the short course description for the first course', 'uploads/courses/64e1ff0ecda1d.png', 'Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit.', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, soluta eum facilis consequatur aut magni officiis reiciendis cum eius quas voluptas mollitia ex nisi labore placeat earum dignissimos omnis sapiente optio ad, sequi quod impedit sint molestias. Corporis fugit nemo provident totam ipsam quam eius est. Velit, dolorem quae repudiandae et ut excepturi totam perferendis facere corrupti voluptatibus modi. Illum?', '600', '12', '1600', 'course two skills', 'www.youtube.come', NULL, '2023-08-20 08:54:54'),
+(2, 'course two title', 'course two description', 'uploads/courses/64e1ff23b2032.png', 'course two long title', 'course two long descriptions', '12', '15', '2121', 'course two skills', 'www.youtube.come', NULL, '2023-08-20 08:55:15'),
+(3, 'course short title', 'course short description', 'uploads/courses/64e1ff3449aa2.png', 'course long title', 'course long description', '120', '140', '1510', 'course two skills', 'www.youtube.come', NULL, '2023-08-20 08:55:32');
 
 -- --------------------------------------------------------
 
@@ -186,7 +186,7 @@ CREATE TABLE `home_pages` (
 --
 
 INSERT INTO `home_pages` (`id`, `home_title`, `home_subtitle`, `home_image`, `tech_description`, `student_count`, `lecture_count`, `review_count`, `video_url`, `video_description`, `created_at`, `updated_at`) VALUES
-(1, 'EASY LEARNING from db', 'Learn Professionally\r\n', 'assets/Image/banner.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsa labore laborum! Rem repellat hic perspiciatis dolorum soluta maiores doloremque sed voluptas impedit quidem. Autem qui itaque illum tempora magnam distinctio debitis repudiandae vero dolores accusantium consequatur error, eos delectus, perferendis\r\n\r\nassumenda, animi eligendi id quas atque nisi libero porro doloremque. Facilis, obcaecati maxime perferendis corrupti rerum fuga cupiditate quod voluptates commodi culpa reprehenderit, dolore aliquam dolores facere, fugiat autem in voluptatibus\r\n\r\nvoluptatum earum itaque magnam ea a consequuntur? Possimus ullam officiis natus blanditiis dolorum expedita deserunt quidem. Non, iure. Reprehenderit quisquam facere dolor, numquam blanditiis repudiandae ea necessitatibus voluptates?', '3000', '120', '200', 'http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsa labore laborum! Rem repellat hic perspiciatis dolorum soluta maiores doloremque sed voluptas impedit quidem. Autem qui itaque illum tempora magnam distinctio debitis repudiandae vero do', NULL, NULL);
+(1, 'EASY LEARNING from EDIT', 'EDIT Learn Professionally', 'uploads/home/64e2091ccc477.jpg', 'EDIT Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsa labore laborum! Rem repellat hic perspiciatis dolorum soluta maiores doloremque sed voluptas impedit quidem. Autem qui itaque illum tempora magnam distinctio debitis repudiandae vero dolores accusantium consequatur error, eos delectus, perferendis\r\n\r\nassumenda, animi eligendi id quas atque nisi libero porro doloremque. Facilis, obcaecati maxime perferendis corrupti rerum fuga cupiditate quod voluptates commodi culpa reprehenderit, dolore aliquam dolores facere, fugiat autem in voluptatibus\r\n\r\nvoluptatum earum itaque magnam ea a consequuntur? Possimus ullam officiis natus blanditiis dolorum expedita deserunt quidem. Non, iure. Reprehenderit quisquam facere dolor, numquam blanditiis repudiandae ea necessitatibus voluptates?', '3000', '120', '200', 'http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsa labore laborum! Rem repellat hic perspiciatis dolorum soluta maiores doloremque sed voluptas impedit quidem. Autem qui itaque illum tempora magnam distinctio debitis repudiandae vero do', NULL, '2023-08-20 09:37:48');
 
 -- --------------------------------------------------------
 
@@ -298,10 +298,10 @@ CREATE TABLE `projects` (
 --
 
 INSERT INTO `projects` (`id`, `image_one`, `image_two`, `project_name`, `project_description`, `project_features`, `project_live`, `created_at`, `updated_at`) VALUES
-(1, 'https://image.freepik.com/free-photo/shocked-male-student-poses-desktop-home-office-uses-laptop-computer-searching-online-education-course-browses-distance-learning-website_273609-34548.jpg', 'assets/Image/pdetails.png', 'dbLorem Ipsum Dolor Sit Amet Consectetur Adipisicing.one\n', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis iste ea nulla accusantium eos soluta iure cum inventore maiores. Iure accusantium maiores hic cupiditate provident nisi deleniti exercitationem deserunt accusamus!\r\n\r\n', 'Lorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur', 'www.youtube.com', NULL, NULL),
-(2, 'https://image.freepik.com/free-photo/shocked-male-student-poses-desktop-home-office-uses-laptop-computer-searching-online-education-course-browses-distance-learning-website_273609-34548.jpg', 'assets/Image/pdetails.png', 'Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing.two\r\n', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis iste ea nulla accusantium eos soluta iure cum inventore maiores. Iure accusantium maiores hic cupiditate provident nisi deleniti exercitationem deserunt accusamus!\r\n\r\n', 'Lorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur', '', NULL, NULL),
-(3, 'https://image.freepik.com/free-photo/shocked-male-student-poses-desktop-home-office-uses-laptop-computer-searching-online-education-course-browses-distance-learning-website_273609-34548.jpg', 'assets/Image/pdetails.png', 'Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing.one\r\n', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis iste ea nulla accusantium eos soluta iure cum inventore maiores. Iure accusantium maiores hic cupiditate provident nisi deleniti exercitationem deserunt accusamus!\r\n\r\n', 'Lorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur', 'www.youtube.com', NULL, NULL),
-(4, 'https://image.freepik.com/free-photo/shocked-male-student-poses-desktop-home-office-uses-laptop-computer-searching-online-education-course-browses-distance-learning-website_273609-34548.jpg', 'assets/Image/pdetails.png', 'Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing.two\r\n', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis iste ea nulla accusantium eos soluta iure cum inventore maiores. Iure accusantium maiores hic cupiditate provident nisi deleniti exercitationem deserunt accusamus!\r\n\r\n', 'Lorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur', '', NULL, NULL);
+(1, 'uploads/projects/64e1ddfe01e3a.png', 'uploads/projects/64e1ddfe01e3a.png', 'dbLorem Ipsum Dolor Sit Amet Consectetur Adipisicing.one', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis iste ea nulla accusantium eos soluta iure cum inventore maiores. Iure accusantium maiores hic cupiditate provident nisi deleniti exercitationem deserunt accusamus!', 'Lorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur', 'www.youtube.com', NULL, '2023-08-20 06:33:50'),
+(2, 'uploads/projects/64e1de082ea66.png', 'uploads/projects/64e1de082ea66.png', 'Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing.two', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis iste ea nulla accusantium eos soluta iure cum inventore maiores. Iure accusantium maiores hic cupiditate provident nisi deleniti exercitationem deserunt accusamus!', 'Lorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur', 'www.youtube.com', NULL, '2023-08-20 06:34:00'),
+(3, 'uploads/projects/64e1faf8efdf3.png', 'uploads/projects/64e1faf8efdf3.png', 'Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing.one', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis iste ea nulla accusantium eos soluta iure cum inventore maiores. Iure accusantium maiores hic cupiditate provident nisi deleniti exercitationem deserunt accusamus!', 'Lorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur', 'www.youtube.com', NULL, '2023-08-20 08:37:28'),
+(4, 'uploads/projects/64e1de1b9e7ba.png', 'uploads/projects/64e1de1b9e7ba.png', 'Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing.two', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis iste ea nulla accusantium eos soluta iure cum inventore maiores. Iure accusantium maiores hic cupiditate provident nisi deleniti exercitationem deserunt accusamus!', 'Lorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur\r\n\r\nLorem ipsum, dolor sit amet consectetur', 'www.youtube.com', NULL, '2023-08-20 06:34:19');
 
 -- --------------------------------------------------------
 
@@ -323,9 +323,9 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`id`, `service_name`, `service_description`, `service_image`, `created_at`, `updated_at`) VALUES
-(1, 'Ecommercedb', 'Some quick example text to build on the card title and make up the bulk of the card\'s content.', 'assets/Image/ecommerce.png', NULL, NULL),
-(2, 'Web Design\r\n', 'Some quick example text to build on the card title and make up the bulk of the card\'s content.', 'assets/Image/ecommerce.png', NULL, NULL),
-(3, 'Web Development', 'Some quick example text to build on the card title and make up the bulk of the card\'s content.', 'assets/Image/ecommerce.png', NULL, NULL);
+(1, 'Ecommercedb', 'Some quick example text to build on the card title and make up the bulk of the card\'s content.', 'uploads/services/64e1ddb123c4f.png', NULL, '2023-08-20 06:32:33'),
+(2, 'Web Design', 'Some quick example text to build on the card title and make up the bulk of the card\'s content.', 'uploads/services/64e1ddcb159f8.png', NULL, '2023-08-20 06:32:59'),
+(3, 'Web Development', 'Some quick example text to build on the card title and make up the bulk of the card\'s content.', 'uploads/services/64e1dddbb4c58.png', NULL, '2023-08-20 06:33:15');
 
 -- --------------------------------------------------------
 
@@ -347,7 +347,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('xY3KX4JvE3fPQADyeZwg2ftyIl3IlGuV9LMXfR1j', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiemI0UVV6TUJsb2VjYlpzZ3R0T0pyZzdKTWY0QlRqV1JtY2hHZUxOTSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzA6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9yZWdpc3RlciI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1691515082);
+('xXspUnaJdJCzbWt1ktBwHlsZqAO0sKOK1FnXeaq2', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiS0wxOEVxN2NGY0dFWVN5WHJkTGJtWUpJZWZLbmRGV2JTWHR5OHluZiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjY6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9ob21lIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1692535069);
 
 -- --------------------------------------------------------
 
@@ -370,6 +370,13 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
+(1, 'muhammed', 'muhammed@gmail.com', NULL, '$2y$10$SNDKHaASmf8MCViAO.E9yOjsSAyYmvjG.VU4jgm9wHvVV2Fav/eye', NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-20 06:26:02', '2023-08-20 06:26:02');
 
 --
 -- Indexes for dumped tables
@@ -497,7 +504,7 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -551,7 +558,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
