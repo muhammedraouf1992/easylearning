@@ -1,8 +1,6 @@
 <x-admin_master>
     <div class="content-body" style="min-height: 788px;">
         <div class="container-fluid">
-          
-           
             <div class="row page-titles mx-0">
                 <div class="col-sm-6 p-md-0">
                     <div class="welcome-text">
@@ -18,7 +16,6 @@
                 </div>
             </div>
                     <!-- row -->
-    
             <div class="row">
                 <div class="col-lg-12">
                         <div class="card">
@@ -47,7 +44,6 @@
                                                     <td>
                                                         <div class="d-flex">
                                                             <a href="{{route('editReview',$item->id)}}" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
-                                                        
                                                             <form action="{{route('deleteReview',$item->id)}}" method="POST">
                                                             @csrf
                                                             @method('DELETE')
