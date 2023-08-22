@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ClientReviewController;
 use App\Http\Controllers\Admin\CoursesController;
 use App\Http\Controllers\Admin\HomePageController;
 use App\Http\Controllers\Admin\ProjectController;
@@ -65,4 +66,12 @@ Route::prefix('home')->group(function () {
     Route::get('/', [HomePageController::class, 'webIndex'])->name('allHome');
     Route::get('/{home}/edit', [HomePageController::class, 'edit'])->name('editHome');
     Route::put('/{home}', [HomePageController::class, 'update'])->name('updateHome');
+});
+Route::prefix('reviews')->group(function () {
+    Route::get('/', [ClientReviewController::class, 'webIndex'])->name('allReviews');
+    Route::get('/create', [ClientReviewController::class, 'create'])->name('addReview');
+    Route::post('/', [ClientReviewController::class, 'store'])->name('storeReview');
+    Route::get('/{review}/edit', [ClientReviewController::class, 'edit'])->name('editReview');
+    Route::put('/{review}', [ClientReviewController::class, 'update'])->name('updateReview');
+    Route::delete('/{review}', [ClientReviewController::class, 'delete'])->name('deleteReview');
 });

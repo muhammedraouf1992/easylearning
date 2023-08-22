@@ -2,6 +2,7 @@
     <div class="content-body">
         <div class="container-fluid">
             <!-- Add Project -->
+           
             <div class="row page-titles mx-0">
                 <div class="col-sm-6 p-md-0">
                     <div class="welcome-text">
@@ -21,24 +22,19 @@
                 <div class="col-xl-9 col-lg-9">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Add a new project</h4>
+                            <h4 class="card-title">Add a new review</h4>
                         </div>
                         <div class="card-body">
                             <div class="basic-form">
-                                <form method="POST" action="{{route('storeProject')}}" enctype="multipart/form-data">
+                                <form method="POST" action="{{route('storeReview')}}" enctype="multipart/form-data">
                                     @csrf
-                                   
                                     <div class="form-group">
-                                        <label for="name" class="text-capitalize">project name</label>
-                                        <input type="text" class="form-control input-default" name="name" id="name" >
+                                        <label for="name" class="text-capitalize">Review title</label>
+                                        <input type="text" class="form-control input-default" name="name" id="name">
                                     </div>
                                     <div class="form-group">
-                                        <label for="description">project description</label>
+                                        <label for="description">Review description</label>
                                         <textarea name="description" id="description" cols="30" rows="6" class="form-control input-default"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="features">project features(seperated by comma)</label>
-                                        <textarea name="features" id="features" cols="30" rows="6" class="form-control input-default"></textarea>
                                     </div>
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
@@ -47,7 +43,7 @@
                                         <div class="custom-file">
                                             <label class="custom-file-label">Choose file</label>
                                             <input type="file" class="custom-file-input" name="image">
-                                        </div> 
+                                        </div>    
                                     </div>
                                     <button type="submit" class="btn btn-success">Add project</button>
                                 </form>

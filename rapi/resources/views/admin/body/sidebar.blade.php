@@ -62,6 +62,16 @@
                     <li><a href="{{route('allHome')}}">Home elements</a></li>                                  
                 </ul>
             </li>
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-003-diamond"></i>
+                    <span class="nav-text">Client reviews</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{route('allReviews')}}">All reviews</a></li>                                
+                    <li><a href="{{route('addReview')}}">add review</a></li>                              
+                </ul>
+            </li>
            
            
         </ul>

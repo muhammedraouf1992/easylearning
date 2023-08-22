@@ -21,24 +21,20 @@
                 <div class="col-xl-9 col-lg-9">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Add a new project</h4>
+                            <h4 class="card-title">Edit project</h4>
                         </div>
                         <div class="card-body">
                             <div class="basic-form">
-                                <form method="POST" action="{{route('storeProject')}}" enctype="multipart/form-data">
+                                <form method="post" action="{{route('updateReview',$review->id)}}" enctype="multipart/form-data">
                                     @csrf
-                                   
+                                    @method('put')
                                     <div class="form-group">
-                                        <label for="name" class="text-capitalize">project name</label>
-                                        <input type="text" class="form-control input-default" name="name" id="name" >
+                                        <label for="name" class="text-capitalize">client name</label>
+                                        <input type="text" class="form-control input-default" name="name" id="name" value="{{$review->client_title}}">
                                     </div>
                                     <div class="form-group">
-                                        <label for="description">project description</label>
-                                        <textarea name="description" id="description" cols="30" rows="6" class="form-control input-default"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="features">project features(seperated by comma)</label>
-                                        <textarea name="features" id="features" cols="30" rows="6" class="form-control input-default"></textarea>
+                                        <label for="description">client description</label>
+                                        <textarea name="description" id="description" cols="30" rows="6" class="form-control input-default">{{$review->client_description}}</textarea>
                                     </div>
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
@@ -47,14 +43,20 @@
                                         <div class="custom-file">
                                             <label class="custom-file-label">Choose file</label>
                                             <input type="file" class="custom-file-input" name="image">
-                                        </div> 
+                                        </div>
+                                        
                                     </div>
-                                    <button type="submit" class="btn btn-success">Add project</button>
+                                   <div>
+                                    <img src="{{asset($review->client_image)}}" alt="" width="150px" height="150px" class="mb-5">
+                                    </div> 
+                                    <button type="submit" class="btn btn-success">update review</button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
+              
+                
             </div>
         </div>
     </div>

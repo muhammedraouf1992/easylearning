@@ -87,7 +87,10 @@ const Testimonial = () => {
               <Row className="text-center justify-content-center" key={d.id}>
                 <Col lg={6} md={6} sm={12}>
                   <div className="d-flex justify-content-center">
-                    <img className="circle-img" src={d.client_image} />
+                    <img
+                      className="circle-img"
+                      src={`http://127.0.0.1:8000/${d.client_image}`}
+                    />
                   </div>
 
                   <h2 className="name">{d.client_title}</h2>
