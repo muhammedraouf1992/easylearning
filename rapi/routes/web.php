@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\ClientReviewController;
 use App\Http\Controllers\Admin\CoursesController;
+use App\Http\Controllers\Admin\FooterController;
 use App\Http\Controllers\Admin\HomePageController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\ServiceController;
@@ -74,4 +75,9 @@ Route::prefix('reviews')->group(function () {
     Route::get('/{review}/edit', [ClientReviewController::class, 'edit'])->name('editReview');
     Route::put('/{review}', [ClientReviewController::class, 'update'])->name('updateReview');
     Route::delete('/{review}', [ClientReviewController::class, 'delete'])->name('deleteReview');
+});
+Route::prefix('footer')->group(function () {
+    Route::get('/', [FooterController::class, 'webIndex'])->name('allFooter');
+    Route::get('/{footer}/edit', [FooterController::class, 'edit'])->name('editFooter');
+    Route::put('/{footer}', [FooterController::class, 'update'])->name('updateFooter');
 });

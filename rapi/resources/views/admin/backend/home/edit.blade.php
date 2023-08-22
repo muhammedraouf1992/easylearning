@@ -2,7 +2,6 @@
     <div class="content-body">
         <div class="container-fluid">
             <!-- Add Project -->
-           
             <div class="row page-titles mx-0">
                 <div class="col-sm-6 p-md-0">
                     <div class="welcome-text">
@@ -22,7 +21,7 @@
                 <div class="col-xl-9 col-lg-9">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Edit project</h4>
+                            <h4 class="card-title">Edit footer</h4>
                         </div>
                         <div class="card-body">
                             <div class="basic-form">

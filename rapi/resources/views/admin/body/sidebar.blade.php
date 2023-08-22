@@ -49,6 +49,16 @@
                     <li><a href="{{route('allCourses')}}">All Courses</a></li>
                     <li><a href="{{route('addCourse')}}">Add Course</a></li>                
                 </ul>
+            </li>           
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-003-diamond"></i>
+                    <span class="nav-text">Client reviews</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{route('allReviews')}}">All reviews</a></li>                                
+                    <li><a href="{{route('addReview')}}">add review</a></li>                              
+                </ul>
             </li>
             <li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -62,11 +72,10 @@
             <li>
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-003-diamond"></i>
-                    <span class="nav-text">Client reviews</span>
+                    <span class="nav-text">Footer Elements</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="{{route('allReviews')}}">All reviews</a></li>                                
-                    <li><a href="{{route('addReview')}}">add review</a></li>                              
+                    <li><a href="{{route('allFooter')}}">Footer elements</a></li>                                  
                 </ul>
             </li>
         </ul>

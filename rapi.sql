@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 20, 2023 at 02:43 PM
+-- Generation Time: Aug 22, 2023 at 03:05 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -68,9 +68,9 @@ CREATE TABLE `client_reviews` (
 --
 
 INSERT INTO `client_reviews` (`id`, `client_image`, `client_title`, `client_description`, `created_at`, `updated_at`) VALUES
-(1, 'https://image.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg', 'dbUser Name', 'Hi! I\'m Kazi Ariyan. I\'m a web developer with a serious love for teaching I am a founder of eLe easy Learning and a passionate Web Developer, Programmer & Instructor.', NULL, NULL),
-(2, 'https://image.freepik.com/free-photo/curly-man-with-broad-smile-shows-perfect-teeth-being-amused-by-interesting-talk-has-bushy-curly-dark-hair-stands-indoor-against-white-blank-wall_273609-17092.jpg', 'user Name2', ' Hi! I\'m Kazi Ariyan. I\'m a web developer with a serious love for teaching I am founder of eLe easy Learning and a passionate Web Developer, Programmer & Instructor.', NULL, NULL),
-(3, 'https://image.freepik.com/free-photo/handsome-young-man-with-new-stylish-haircut_176420-19637.jpg', 'user Name 3', 'Hi! I\'m Kazi Ariyan. I\'m a web developer with a serious love for teaching I am a founder of eLe easy Learning and a passionate Web Developer, Programmer & Instructor.', NULL, NULL);
+(1, 'uploads/reviews/64e48123633ec.jpg', 'User Name 1', 'Hi! I\'m Kazi Ariyan. I\'m a web developer with a serious love for teaching I am a founder of eLe easy Learning and a passionate Web Developer, Programmer & Instructor.', NULL, '2023-08-22 06:39:32'),
+(2, 'uploads/reviews/64e4817554245.jpg', 'user Name2', 'Hi! I\'m Kazi Ariyan. I\'m a web developer with a serious love for teaching I am founder of eLe easy Learning and a passionate Web Developer, Programmer & Instructor.', NULL, '2023-08-22 06:35:49'),
+(3, 'uploads/reviews/64e481b21fec1.jpg', 'user Name 3', 'Hi! I\'m Kazi Ariyan. I\'m a web developer with a serious love for teaching I am a founder of eLe easy Learning and a passionate Web Developer, Programmer & Instructor.', NULL, '2023-08-22 06:36:50');
 
 -- --------------------------------------------------------
 
@@ -158,7 +158,7 @@ CREATE TABLE `footers` (
 --
 
 INSERT INTO `footers` (`id`, `address`, `email`, `phone`, `facebook`, `twitter`, `youtube`, `copyright`, `created_at`, `updated_at`) VALUES
-(1, '6522 Baltimore National Pike CatonsVille, Califonia USA', 'Support@Ele.Com\r\n\r\n', '434343434', 'https://www.facebook.com/', 'https://www.twitter.com/', 'https://www.youtube.com/', 'Copyright 2016 by easy Learning, All Rights Reserved', NULL, NULL);
+(1, '6522 Baltimore National Pike CatonsVille, Califonia Egypt', 'Support@gmail.Com', '12345151', 'https://www.facebook.com/', 'https://www.twitter.com/', 'https://www.youtube.com/', 'Copyright 2016 by Raouf, All Rights Reserved', NULL, '2023-08-22 10:02:35');
 
 -- --------------------------------------------------------
 
@@ -347,7 +347,23 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('xXspUnaJdJCzbWt1ktBwHlsZqAO0sKOK1FnXeaq2', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiS0wxOEVxN2NGY0dFWVN5WHJkTGJtWUpJZWZLbmRGV2JTWHR5OHluZiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjY6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9ob21lIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1692535069);
+('54MvTxzFEy5ySxzsM4tk3q7r2HplTyk8jczWlxB2', NULL, '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiWmlHeDh6MmMzbmJkaVE3eGx4c2MyRjBCTFIzbXFOQ2lOaGJLWmppUCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mb290ZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1692704984),
+('9vM2SQsFASWqTyoUql6DBTdMZU3usb9hEZjafbPK', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiUm9OQTgzS1d4dXdZbUIwbUpKUTMyQks0VlRtdGRub0VTWTE4NGFCOSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mb290ZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1692709356),
+('9WNhCLNxrFpKnQQ539TSvfOxodQywmHxQxl5jR3d', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoic041Z3lCSnAxanRXR2dJdnhIWFBxOGs5U01sODNnTm9mZFBSb0NSbCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mb290ZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1692704787),
+('Fv75kkexGgz1a13hz9MWdl7ntTcNF1OBMIAHPkPg', NULL, '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoidFVwTE5UNlg3cGIyNlAzdkhKdmRhNVA1b2swMXI5TEFUaHFISTNnNSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mb290ZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1692704986),
+('gKL4gfbF6Wu8YHuGouc5z9DWA9av8zcpG01z6Wjj', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoieUhwNXdBejRGZnJkVHBOMmREMnZzZ2R2eTlKQmJ4OFg3MW9rbVJGViI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mb290ZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1692704814),
+('gUXaNvnLuBTfPSt15qDYNS1i1tMh3kGmZmaWmNvp', NULL, '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoicDlYNVh0OG5wWE5mTk1pVjJNcHU4aHV0aE5pelZnam1ySHlBU1E4SCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mb290ZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1692705016),
+('hBIrxd948QaYX8f3jGw4wmM3XTBAPXcFNoXcyT2L', NULL, '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiSHV2QkRaY1F6b1lXTjN6ZXZVWGZ0REd3ODE4MjM0eVRQdU1hZE1NeiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mb290ZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1692704873),
+('KwcNUOdnsev3vPLWSfb0zfW2XbTWb9BVYiSFoWF8', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoibG5menVuM20yenI5Z2U0R3FWNFFzZUhpejNPTENyVzVxdXoxUElVZyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mb290ZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1692704787),
+('kWjk3c7zlkgVFdOZlwgCuOwVZqGgVn2tc7GgIYf2', NULL, '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiYlFzV2ZWem1ybndEOHBCUktvcHU5TU5lTlpFd0dZRVdFR09SU01vMCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mb290ZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1692705018),
+('ofQXkPU3OUrgjjIFXEEBgH5ltRLHNDIWYkTLlXpJ', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoibG9mRlRPTTdkWmF6VEpyWW9zME1tTHhJS0VqWjJvUHdteE9zdG5VWiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mb290ZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1692704787),
+('t2gq2jfzRXLq4tiM0XTMuSCKgjukRVUOvAtEbs2M', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiSWJXblZuM2FSSWF6U2ltTlpxODZqckdRU3lwNzc1c0FxYUJsTDczMiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mb290ZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1692704812),
+('tAPTi3JA3cQcucPhRe0OYMwdj0OFxfo60vJ8fI0y', NULL, '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoic1FtWjFEQldHcklYaTlxUWs3VWZzR0VaQk8zdTVXTjFIU1VGUW8wTSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mb290ZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1692704871),
+('Va7mohTZOu3DqWYqZoTvTXcMZICfy6Zdm6OVjiZt', NULL, '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiSTB4ZmlBMkdORDNBWG1SWEhvdHI3RHZJV3hUSGNqRTJQQUhkNmxQTSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mb290ZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1692704986),
+('Vr3ztGE683vc7E4AIytKmI0bvs72ZnC0kE92bata', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiSWZyaXpQSFZDZGtXTGQ0YUZiTTFScFJFejczN3ZrS0RsMFJQeVQ0eiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mb290ZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1692704815),
+('w2KKGUwNlJtMkkOvLANvlL1lKK8iYPzFT19yxOjK', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoicDdZanBGa29nZHJocWlzenVWQTZ0WDNTN1BCbEU2UzhxMmZKdU1DMyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjk6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9yZXZpZXdzIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1692697274),
+('xXspUnaJdJCzbWt1ktBwHlsZqAO0sKOK1FnXeaq2', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiS0wxOEVxN2NGY0dFWVN5WHJkTGJtWUpJZWZLbmRGV2JTWHR5OHluZiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjY6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9ob21lIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1692535069),
+('zsbcFqkNnJKtG174o2YVqLlk3BLj7e6tpZX4yyzH', NULL, '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiOTdqTVk3TktiMElsczJaWE5SbkY3MU90Q2s5dG1DUHlHVHdkSW9hTyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mb290ZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1692704874);
 
 -- --------------------------------------------------------
 
@@ -492,7 +508,7 @@ ALTER TABLE `charts`
 -- AUTO_INCREMENT for table `client_reviews`
 --
 ALTER TABLE `client_reviews`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `contacts`
