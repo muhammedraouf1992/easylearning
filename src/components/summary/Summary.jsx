@@ -1,65 +1,40 @@
-import React, { useEffect, useState } from "react";
+import React, { createRef, useEffect, useRef, useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { BsGlobe2 } from "react-icons/bs";
 import { MdOutlineComputer } from "react-icons/md";
 import { AiFillStar } from "react-icons/ai";
 import { AiFillCheckSquare } from "react-icons/ai";
+import Counter from "../counter/Counter";
 
 const Summary = () => {
   const [student, setStudent] = useState(0);
   const [courses, setcourses] = useState(0);
   const [reviews, setReviews] = useState(0);
   const studentValue = 35000;
-  const coursesValues = 22;
+  const coursesValues = 2200;
   const reviewsValue = 3000;
-
-  function countStudent(number) {
-    const c = number / 200; //1750
-    if (student < studentValue) {
-      setStudent((s) => s + c);
-    }
-  }
-  function countCourses(number) {
-    const c = number / 200; //1750
-    if (courses < coursesValues) {
-      setcourses((s) => Math.ceil(s + c));
-    }
-  }
-  function countReviews(number) {
-    const c = number / 200; //1750
-    if (reviews < reviewsValue) {
-      setReviews((s) => s + c);
-    }
-  }
+  const ref = useRef(0);
+  const containerRef = useRef();
 
   return (
-    <Container fluid={true} className="summaryBanner my-5">
+    <Container fluid={true} className="summaryBanner my-5" ref={containerRef}>
       <Row>
         <Col lg={8} md={12} sm={8}>
           <Row className="mt-5">
             <Col>
-              <div className="text-white text-center text-capitalize d-flex flex-column align-items-center">
+              {/* <div className="text-white text-center text-capitalize d-flex flex-column align-items-center">
                 <BsGlobe2 className="fs-1" />
                 <h1 className="counter mt-2">{student}</h1>
                 <p className="counter-subtitle">students worldwide</p>
                 <div className="line"></div>
-              </div>
+              </div> */}
+              <Counter value={35000} subtitle={"students worldwide"} />
             </Col>
             <Col>
-              <div className="text-white text-center text-capitalize d-flex flex-column align-items-center">
-                <MdOutlineComputer className="fs-1" />
-                <h1 className="counter mt-2">{courses}</h1>
-                <p className="counter-subtitle">Courses published</p>
-                <div className="line"></div>
-              </div>
+              <Counter value={22} subtitle={"Courses Published"} />
             </Col>
             <Col>
-              <div className="text-white text-center text-capitalize d-flex flex-column align-items-center">
-                <AiFillStar className="fs-1" />
-                <h1 className="counter mt-2">{reviews}</h1>
-                <p className="counter-subtitle">student reviews</p>
-                <div className="line"></div>
-              </div>
+              <Counter value={3000} subtitle={"students Reviews"} />
             </Col>
           </Row>
         </Col>
