@@ -11,7 +11,7 @@ const Courses = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://127.0.0.1:8000/api/courses`)
+      .get(`http://easylearning.byethost5.com/api/courses`)
       .then((response) => {
         setData(response.data);
         setLoading(false);
@@ -44,7 +44,7 @@ const Courses = () => {
               <Col lg={6} md={12} sm={12}>
                 <div className="justify-content-end">
                   <img
-                    src={`http://127.0.0.1:8000/${d.short_image}`}
+                    src={`http://easylearning.byethost5.com/${d.short_image}`}
                     alt=""
                     style={{ width: "70%" }}
                     className="p-2"
