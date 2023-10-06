@@ -13,7 +13,7 @@ const Testimonial = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://easylearning.byethost5.com/api/reviews/`)
+      .get(`https://easylearning.byethost5.com/api/reviews/`)
       .then((response) => {
         setData(response.data);
         setLoading(false);
@@ -89,7 +89,7 @@ const Testimonial = () => {
                   <div className="d-flex justify-content-center">
                     <img
                       className="circle-img"
-                      src={`http://easylearning.byethost5.com/${d.client_image}/`}
+                      src={`https://easylearning.byethost5.com/${d.client_image}/`}
                     />
                   </div>
 

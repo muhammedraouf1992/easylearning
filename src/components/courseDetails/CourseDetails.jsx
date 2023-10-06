@@ -18,7 +18,7 @@ const CourseDetails = ({ data, loading, errors }) => {
           <h1 className="c_heading">{data.long_title}</h1>
           <div>
             <img
-              src={`http://easylearning.byethost5.com/${data.short_image}/`}
+              src={`https://easylearning.byethost5.com/${data.short_image}/`}
               alt=""
             />
           </div>

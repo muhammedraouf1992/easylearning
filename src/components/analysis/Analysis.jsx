@@ -21,7 +21,7 @@ const Analysis = ({ home }) => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://easylearning.byethost5.com/api/charts/`)
+      .get(`https://easylearning.byethost5.com/api/charts/`)
       .then((response) => {
         setData(response.data);
         setLoading(false);

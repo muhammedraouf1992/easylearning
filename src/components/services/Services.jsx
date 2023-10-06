@@ -13,7 +13,7 @@ const Services = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://easylearning.byethost5.com/api/services/")
+      .get("https://easylearning.byethost5.com/api/services/")
       .then((response) => {
         setData(response.data);
         setLoading(false);
@@ -43,7 +43,7 @@ const Services = () => {
               <Card className="text-center py-3 shadow-md">
                 <div>
                   <img
-                    src={`http://127.0.0.1:8000/${d.service_image}/`}
+                    src={`https://127.0.0.1:8000/${d.service_image}/`}
                     alt=""
                     className="serviceIcon"
                   />

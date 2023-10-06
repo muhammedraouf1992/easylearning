@@ -15,7 +15,7 @@ const ProjectDetailsPage = () => {
     window.scrollTo(0, 0);
     setLoading(true);
     axios
-      .get(`http://easylearning.byethost5.com/api/projects/${params.id}/`)
+      .get(`https://easylearning.byethost5.com/api/projects/${params.id}/`)
       .then((response) => {
         setData(response.data);
         setLoading(false);
