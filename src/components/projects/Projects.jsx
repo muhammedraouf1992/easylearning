@@ -12,7 +12,7 @@ const Projects = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://easylearning.byethost5.com/api/projects/`)
+      .get(`http://127.0.0.1:8000/api/projects`)
       .then((response) => {
         setData(response.data);
         setLoading(false);
@@ -49,7 +49,7 @@ const Projects = () => {
             <Card className="project_card">
               <Card.Img
                 variant="top"
-                src={`https://127.0.0.1:8000/${d.image_one}/`}
+                src={`http://127.0.0.1:8000/${d.image_one}`}
               />
               <Card.Body>
                 <Card.Title>{d.project_name}</Card.Title>
