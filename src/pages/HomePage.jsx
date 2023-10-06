@@ -21,7 +21,14 @@ const HomePage = () => {
     window.scrollTo(0, 0);
     setLoading(true);
     axios
-      .get("https://easylearning.byethost5.com/api/homePage/")
+      .request({
+        method: "GET",
+        url: "https://easylearning.byethost5.com/api/homePage/",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      })
       .then((response) => {
         setHome(response.data[0]);
         setLoading(false);
