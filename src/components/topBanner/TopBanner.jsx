@@ -20,7 +20,7 @@ const TopBanner = ({ home, errors, loading }) => {
       fluid={true}
       style={{
         background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      url(http://127.0.0.1:8000/${home.home_image})`,
+      url(http://easylearning.byethost5.com/${home.home_image})`,
       }}
       className="topBanner d-flex justify-content-center align-items-center mt-5"
     >

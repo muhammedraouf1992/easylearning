@@ -17,7 +17,7 @@ const Footer = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://127.0.0.1:8000/api/footer")
+      .get("http://easylearning.byethost5.com/api/footer")
       .then(({ data }) => {
         setData(data[0]);
         setLoading(false);

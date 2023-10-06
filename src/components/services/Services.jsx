@@ -13,7 +13,7 @@ const Services = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://127.0.0.1:8000/api/services")
+      .get("http://easylearning.byethost5.com/api/services")
       .then((response) => {
         setData(response.data);
         setLoading(false);
