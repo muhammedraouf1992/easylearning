@@ -19,7 +19,7 @@ const ProjectDetails = ({ data, loading, errors }) => {
         <Col lg={6} md={12} sm={12}>
           <div className="project_img">
             <img
-              src={`http://easylearning.byethost5.com/${data.image_two}`}
+              src={`http://easylearning.byethost5.com/${data.image_two}/`}
               alt=""
             />
           </div>

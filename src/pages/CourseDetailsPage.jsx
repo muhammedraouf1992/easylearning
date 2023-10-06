@@ -15,7 +15,7 @@ const CourseDetailsPage = () => {
     window.scrollTo(0, 0);
     setLoading(true);
     axios
-      .get(`http://easylearning.byethost5.com/api/courses/${params.id}`)
+      .get(`http://easylearning.byethost5.com/api/courses/${params.id}/`)
       .then((response) => {
         setData(response.data);
         setLoading(false);
