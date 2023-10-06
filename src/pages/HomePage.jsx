@@ -23,7 +23,7 @@ const HomePage = () => {
     axios
       .request({
         method: "GET",
-        url: "https://easylearning.byethost5.com/api/homePage/",
+        url: "http://127.0.0.1:8000/api/homePage/",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
