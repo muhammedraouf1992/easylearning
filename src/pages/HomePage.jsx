@@ -23,7 +23,7 @@ const HomePage = () => {
     axios
       .request({
         method: "GET",
-        url: "http://127.0.0.1:8000/api/homePage",
+        url: "https://mybackend.hstn.me/api/homePage",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
